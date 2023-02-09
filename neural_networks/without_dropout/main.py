@@ -74,6 +74,8 @@ if __name__ == '__main__':
         print("Number of epochs: {} - Hidden size 1: {} - Hidden size 2: {} - Mini batch: {}".format(num_epochs, hidden_sizes_1, hidden_sizes_2, batch ))
         print( 'Val loss: {}'.format(loss))
         print("Train R^2 Score : {:.2f}".format(r2))
+
+        writer.add_scalar('metrics/test r2', r2)
         
         if (loss < best_loss and r2 > best_r2):
             log_name_b = log_name
@@ -91,7 +93,7 @@ if __name__ == '__main__':
     # Process is complete.
     print('Training process has finished.')
 
-    print("--- Best Model ---")
+    print("\n --- Best Model ---")
     print("Number of epochs: {} - Hidden size 1: {} - Hidden size 2: {} - Mini batch: {}".format(num_epochs_b, hidden_sizes_1_b, hidden_sizes_2_b, batch_b ))
     print( 'Val loss: {}'.format(best_loss))
     print("Train R^2 Score : {:.2f}".format(best_r2))

@@ -95,7 +95,7 @@ if __name__ == '__main__':
     # Process is complete.
     print('Training process has finished.')
 
-    print("--- Best Model ---")
+    print("\n --- Best Model ---")
     print("Number of epochs: {} - Hidden size 1: {} - Hidden size 2: {} - Mini batch: {} - Depth: {}".format(num_epochs_b, hidden_sizes_1_b, hidden_sizes_2_b, batch_b, depth_b ))
     print( 'Val loss: {}'.format(best_loss))
     print("Train R^2 Score : {:.2f}".format(best_r2))
