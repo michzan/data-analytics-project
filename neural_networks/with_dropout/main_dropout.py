@@ -118,7 +118,7 @@ if __name__ == '__main__':
     print("Test R^2 Score : {:.2f}".format(r2))
 
     print("Here there is the plotting for the loss val related to the test model")
-    loss_best_model = Image.open('..\..\docs\with_dropout_lossval_bestmodel.png')
+    loss_best_model = Image.open('..\..\docs\without_dropout_lossval_bestmodel.png')
     loss_best_model.show()
     
     
