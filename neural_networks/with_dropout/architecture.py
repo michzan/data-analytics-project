@@ -2,6 +2,7 @@ import torch
 from torch import nn
 
 
+# definition of a Multi Layer Perceptron with 2 hidden layers and with ReLu as activation function
 class MLP(nn.Module):
     #Multilayer Perceptron for regression.
 
@@ -19,6 +20,7 @@ class MLP(nn.Module):
         #Forward pass
         return self.layers(x)
 
+# definition of a Multi Layer Perceptron with 2 hidden layers and with ReLu as activation function and with dropout
 class MLP_DropOut(nn.Module):
     def __init__(self, input_size, hidden_size_1, hidden_size_2, dropout_prob, depth):
         super(MLP_DropOut, self).__init__()
