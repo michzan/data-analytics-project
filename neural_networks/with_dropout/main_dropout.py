@@ -7,6 +7,7 @@ from sklearn.metrics import r2_score
 from torch.utils.data import DataLoader
 from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader, Subset
+from PIL import Image
 
 from data_layer import MovieLensDataset
 from utils import fix_random, train_model, test_model
@@ -115,6 +116,10 @@ if __name__ == '__main__':
     print( 'Test loss: {}'.format(loss_test.item()))
     r2 = r2_score(y_pred.detach().numpy().squeeze(), y_test.detach().numpy())
     print("Test R^2 Score : {:.2f}".format(r2))
+
+    print("Here there is the plotting for the loss val related to the test model")
+    loss_best_model = Image.open('..\..\docs\with_dropout_lossval_bestmodel.png')
+    loss_best_model.show()
     
     
 #Later to restore: 
